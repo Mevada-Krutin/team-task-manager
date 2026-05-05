@@ -33,25 +33,38 @@ A premium, full-stack collaborative task management application built for effici
 3. Run `npm run dev`.
 4. Open the browser at `http://localhost:5173`.
 
-## Deployment Guide (Railway)
+## Deployment Guide (Vercel)
 
 ### 1. Preparation
 - Ensure your MongoDB URI is accessible (e.g., MongoDB Atlas).
-- Change `baseURL` in `frontend/src/api/index.js` to your deployed backend URL.
+- Ensure `frontend/src/api/index.js` is configured to use `import.meta.env.VITE_API_URL`.
 
 ### 2. Backend Deployment
-1. Create a new project on Railway.
+1. Create a new project on Vercel.
 2. Connect your GitHub repository.
-3. Select the `backend` directory.
-4. Add environment variables: `MONGO_URI`, `JWT_SECRET`, `PORT=5000`.
+3. In the **General** settings, set the **Root Directory** to `backend`.
+4. In **Build & Development Settings**, ensure the framework is set to **Express**.
+5. Add **Environment Variables**:
+   - `MONGO_URI`: Your MongoDB connection string.
+   - `JWT_SECRET`: A secure secret for tokens.
+6. Deploy the project.
 
 ### 3. Frontend Deployment
-1. Create a new service on Railway.
+1. Create a new project on Vercel.
 2. Connect your GitHub repository.
-3. Select the `frontend` directory.
-4. Add environment variable: `VITE_API_URL` (if applicable) or ensure the API utility points to the backend.
+3. In the **General** settings, set the **Root Directory** to `frontend`.
+4. In **Build & Development Settings**:
+   - Framework Preset: **Vite**.
+   - Output Directory: `dist`.
+5. Add **Environment Variables**:
+   - `VITE_API_URL`: The URL of your deployed backend (e.g., `https://your-backend.vercel.app`).
+6. Deploy the project.
+
+### 4. Handling Refresh (404 Error)
+This project includes a `vercel.json` in the `frontend` folder to handle client-side routing. If you encounter a 404 error when refreshing pages, ensure the **Root Directory** is set to `frontend` so Vercel can find the configuration.
 
 ## Submission Requirements
-- **Live URL**: [Pending Deployment]
-- **GitHub**: [Pending Upload]
+- **Live URL**: https://team-task-manager-gh92.vercel.app
+- **GitHub**: https://github.com/Mevada-Krutin/team-task-manager
 - **Demo**: [Pending Recording]
+
