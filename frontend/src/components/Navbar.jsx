@@ -15,11 +15,14 @@ const Navbar = () => {
   return (
     <nav className="glass" style={{ margin: '1rem', padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-        <div style={{ background: 'var(--primary)', padding: '0.5rem', borderRadius: '8px' }}>
-          <LayoutDashboard color="white" size={20} />
-        </div>
-        <span style={{ fontWeight: '700', fontSize: '1.25rem' }}>TaskFlow</span>
+        <img 
+          src="/hand_sketched_task_logo.png" 
+          alt="Logo" 
+          style={{ width: '32px', height: '32px', objectFit: 'contain' }} 
+        />
+        <span style={{ fontWeight: '700', fontSize: '1.25rem', letterSpacing: '-0.025em' }}>TaskFlow</span>
       </div>
+
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
         <Link to="/dashboard" style={{ color: 'white', textDecoration: 'none', fontWeight: '500' }}>Dashboard</Link>
