@@ -59,12 +59,3 @@ A premium, full-stack collaborative task management application built for effici
 5. Add **Environment Variables**:
    - `VITE_API_URL`: The URL of your deployed backend (e.g., `https://your-backend.vercel.app`).
 6. Deploy the project.
-
-### 4. Handling Refresh (404 Error)
-This project includes a `vercel.json` in the `frontend` folder to handle client-side routing. If you encounter a 404 error when refreshing pages, ensure the **Root Directory** is set to `frontend` so Vercel can find the configuration.
-
-## Submission Requirements
-- **Live URL**: https://team-task-manager-gh92.vercel.app
-- **GitHub**: https://github.com/Mevada-Krutin/team-task-manager
-- **Demo**: [Pending Recording]
-
